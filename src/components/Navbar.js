@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 export default class Navbar extends Component {
+  state = {
+    authenticated: null
+  };
   render() {
     if (this.props.signedIn === true) {
       return (
@@ -19,14 +22,18 @@ export default class Navbar extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <Link to="/home">Logout</Link>
+                  <Link to="/" onClick={() => this.props.onSignIn(false)}>
+                    Logout
+                  </Link>
                 </li>
               </ul>
             </div>
           </nav>
           <ul className="sidenav" id="mobile-demo">
             <li>
-              <Link to="/home">Logout</Link>
+              <Link to="/" onClick={() => this.props.onSignIn(false)}>
+                Logout
+              </Link>
             </li>
           </ul>
         </div>

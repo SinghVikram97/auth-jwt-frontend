@@ -21,7 +21,7 @@ class App extends Component {
     return (
       <BrowserRouter history={history}>
         <div className="App">
-          <Navbar signedIn={this.state.signedIn} />
+          <Navbar signedIn={this.state.signedIn} onSignIn={this.onSignIn} />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route
