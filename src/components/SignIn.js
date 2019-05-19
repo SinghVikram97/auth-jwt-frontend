@@ -28,8 +28,8 @@ export default class SignIn extends Component {
       .then(res => res.json())
       .then(data => {
         console.log(typeof data);
-        this.setState({ authenticated: data });
-        this.props.onSignIn(data);
+        this.setState({ authenticated: data.success });
+        this.props.onSignIn(data.success);
         if (data === true) {
         }
       });
