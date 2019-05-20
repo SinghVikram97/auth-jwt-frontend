@@ -27,7 +27,7 @@ export default class SignIn extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(typeof data);
+        console.log(data);
         this.setState({ authenticated: data.success });
         this.props.onSignIn(data.success);
         if (data === true) {
