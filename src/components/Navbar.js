@@ -22,7 +22,13 @@ export default class Navbar extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <Link to="/" onClick={() => this.props.onSignIn(false)}>
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      localStorage.clear();
+                      this.props.onSignIn(false);
+                    }}
+                  >
                     Logout
                   </Link>
                 </li>
@@ -31,7 +37,13 @@ export default class Navbar extends Component {
           </nav>
           <ul className="sidenav" id="mobile-demo">
             <li>
-              <Link to="/" onClick={() => this.props.onSignIn(false)}>
+              <Link
+                to="/"
+                onClick={() => {
+                  localStorage.clear();
+                  this.props.onSignIn(false);
+                }}
+              >
                 Logout
               </Link>
             </li>

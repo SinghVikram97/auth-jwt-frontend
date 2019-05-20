@@ -4,7 +4,8 @@ export default class SignIn extends Component {
   state = {
     email: "",
     password: "",
-    authenticated: ""
+    authenticated: "",
+    id: ""
   };
   email = e => {
     this.setState({ email: e.target.value });
@@ -28,8 +29,11 @@ export default class SignIn extends Component {
       .then(res => res.json())
       .then(data => {
         console.log(data);
-        this.setState({ authenticated: data.success });
+        localStorage.setItem("id", JSON.stringify(data.user_id));
+        this.setState({ authenticated: data.success, id: data.user_id });
+
         this.props.onSignIn(data.success);
+
         if (data === true) {
         }
       });
@@ -120,7 +124,13 @@ export default class SignIn extends Component {
         </div>
       );
     } else {
-      return <Redirect to="/profile" push={true} />;
+      return (
+        <Redirect
+          to={{
+            pathname: "/profile"
+          }}
+        />
+      );
     }
   }
 }
