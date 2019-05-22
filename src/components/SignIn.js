@@ -28,7 +28,7 @@ export default class SignIn extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        console.log(data);
+        console.log("Data", data);
         localStorage.setItem("id", JSON.stringify(data.user_id));
         this.setState({ authenticated: data.success, id: data.user_id });
 
