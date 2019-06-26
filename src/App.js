@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import SignIn from "./components/SignIn";
 import history from "./history";
+import Profile from "./components/Profile";
 class App extends Component {
   render() {
     return (
@@ -13,6 +14,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/sign-in" component={SignIn} />
+            <Route exact path="/profile" component={Profile} />
           </Switch>
         </div>
       </BrowserRouter>

@@ -7,12 +7,15 @@
     "eslint-plugin-prettier": "^3.1.0",
     "history": "^4.9.0",
     "prettier": "^1.17.1",
+    "pushstate-server": "^3.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "tachyons": "^4.11.1"
   },
+  "proxy": "http://localhost:4444",
+  "homepage": "http://singhVikram97.github.io/user-auth-portal",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -33,5 +36,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
