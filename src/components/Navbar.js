@@ -18,7 +18,10 @@ export default class Navbar extends Component {
                 data-target="mobile-demo"
                 className="sidenav-trigger"
               >
-                <img src="https://img.icons8.com/ios/50/000000/menu.png" />
+                <img
+                  src="https://img.icons8.com/ios/50/000000/menu.png"
+                  alt="smallmenu"
+                />
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
@@ -63,14 +66,14 @@ export default class Navbar extends Component {
                 data-target="mobile-demo"
                 className="sidenav-trigger"
               >
-                <img src="https://img.icons8.com/ios/50/000000/menu.png" />
+                <img
+                  src="https://img.icons8.com/ios/50/000000/menu.png"
+                  alt="menu"
+                />
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
                   <Link to="/sign-in">Sign In</Link>
-                </li>
-                <li>
-                  <Link to="/sign-up">Sign Up</Link>
                 </li>
               </ul>
             </div>
