@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/user-auth-portal/static/css/main.34de6062.chunk.css",
+    "main.js": "/user-auth-portal/static/js/main.8b608e88.chunk.js",
+    "main.js.map": "/user-auth-portal/static/js/main.8b608e88.chunk.js.map",
+    "runtime~main.js": "/user-auth-portal/static/js/runtime~main.7028951b.js",
+    "runtime~main.js.map": "/user-auth-portal/static/js/runtime~main.7028951b.js.map",
+    "static/css/2.31dafeb2.chunk.css": "/user-auth-portal/static/css/2.31dafeb2.chunk.css",
+    "static/js/2.74995013.chunk.js": "/user-auth-portal/static/js/2.74995013.chunk.js",
+    "static/js/2.74995013.chunk.js.map": "/user-auth-portal/static/js/2.74995013.chunk.js.map",
+    "index.html": "/user-auth-portal/index.html",
+    "precache-manifest.7b8d06ba736ba86d6e828ef9995f8768.js": "/user-auth-portal/precache-manifest.7b8d06ba736ba86d6e828ef9995f8768.js",
+    "service-worker.js": "/user-auth-portal/service-worker.js",
+    "static/css/2.31dafeb2.chunk.css.map": "/user-auth-portal/static/css/2.31dafeb2.chunk.css.map",
+    "static/css/main.34de6062.chunk.css.map": "/user-auth-portal/static/css/main.34de6062.chunk.css.map"
+  }
+}
