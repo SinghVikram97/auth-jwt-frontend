@@ -5,7 +5,7 @@ export default class Navbar extends Component {
     authenticated: null
   };
   render() {
-    if (this.props.signedIn === true) {
+    if (this.props.isSignedIn === true) {
       return (
         <div>
           <nav className="nav-wrapper">

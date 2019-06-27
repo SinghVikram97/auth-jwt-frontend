@@ -28,7 +28,7 @@ export default class SignIn extends Component {
               className="input-field center-align"
               style={{ marginTop: "10%" }}
             >
-              <input type="submit" value="submit" />
+              <input type="submit" value="submit" onClick={this.handleClick} />
             </div>
           </form>
         </div>

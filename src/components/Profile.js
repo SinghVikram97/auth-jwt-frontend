@@ -16,9 +16,10 @@ export default class Profile extends Component {
       }
     }).then(data => {
       console.log(data.data);
+      this.setState({ username: data.data.username });
     });
   }
   render() {
-    return <div>Hi</div>;
+    return <div>{this.state.username}</div>;
   }
 }
