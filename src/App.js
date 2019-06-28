@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import SignIn from "./components/SignIn";
 import Profile from "./components/Profile";
+import OtpVerify from "./components/OtpVerify";
 class App extends Component {
   state = {
     isSignedIn: false
@@ -28,6 +29,7 @@ class App extends Component {
               path="/profile"
               render={() => <Profile handleSignIn={this.handleSignIn} />}
             />
+            <Route exact path="/otp" component={OtpVerify} />
           </Switch>
         </div>
       </BrowserRouter>
