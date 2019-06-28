@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 export default class Navbar extends Component {
-  state = {
-    authenticated: null
+  handleClick = () => {
+    console.log("Clicked");
   };
   render() {
     if (this.props.isSignedIn === true) {
@@ -25,30 +25,19 @@ export default class Navbar extends Component {
               </a>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <Link
-                    to="/"
-                    onClick={() => {
-                      localStorage.clear();
-                      this.props.onSignIn(false);
-                    }}
+                  <a
+                    href="http://localhost:4444/logout"
+                    onClick={this.handleClick}
                   >
                     Logout
-                  </Link>
+                  </a>
                 </li>
               </ul>
             </div>
           </nav>
           <ul className="sidenav" id="mobile-demo">
             <li>
-              <Link
-                to="/"
-                onClick={() => {
-                  localStorage.clear();
-                  this.props.onSignIn(false);
-                }}
-              >
-                Logout
-              </Link>
+              <a href="http://localhost:4444/logout">Logout</a>
             </li>
           </ul>
         </div>

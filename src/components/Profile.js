@@ -4,6 +4,7 @@ export default class Profile extends Component {
   state = {
     username: ""
   };
+
   componentDidMount() {
     Axios.get("/profile", {
       withCredentials: true,
@@ -15,11 +16,14 @@ export default class Profile extends Component {
         Authorization: "vikramsinghbedi"
       }
     }).then(data => {
-      console.log(data.data);
-      this.setState({ username: data.data.username });
+      if (data.data.username) {
+        this.setState({ username: data.data.username });
+        this.props.handleSignIn(true);
+      }
     });
   }
   render() {
+    console.log("Rerendered");
     return <div>{this.state.username}</div>;
   }
 }
