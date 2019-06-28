@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 import Axios from "axios";
 export default class Profile extends Component {
   state = {
@@ -19,11 +20,16 @@ export default class Profile extends Component {
       if (data.data.username) {
         this.setState({ username: data.data.username });
         this.props.handleSignIn(true);
+      } else {
+        // this.setState({ username: data.data });
+        window.location.replace("http://localhost:3000/sign-in");
       }
     });
   }
   render() {
-    console.log("Rerendered");
+    // if (this.state.username === false) {
+    //   return <Redirect to="http://localhost:3000/signin" />;
+    // }
     return <div>{this.state.username}</div>;
   }
 }
