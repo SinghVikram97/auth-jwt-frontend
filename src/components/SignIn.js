@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 export default class SignIn extends Component {
   render() {
     return (
@@ -22,11 +23,14 @@ export default class SignIn extends Component {
                 class="validate"
                 name="password"
               />
-              <label for="password">Password (Ignore for OTP login) </label>
+              <label for="password">Password</label>
+            </div>
+            <div className="center-align" style={{ marginTop: "8%" }}>
+              <Link to="/forgot">Forgot Password?</Link>
             </div>
             <div
               className="input-field center-align"
-              style={{ marginTop: "10%" }}
+              style={{ marginTop: "5%" }}
             >
               <input type="submit" value="submit" onClick={this.handleClick} />
             </div>

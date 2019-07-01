@@ -5,6 +5,9 @@ import Home from "./components/Home";
 import SignIn from "./components/SignIn";
 import Profile from "./components/Profile";
 import OtpVerify from "./components/OtpVerify";
+import Forgot from "./components/Forgot";
+import ResetMsg from "./components/ResetMsg";
+import Reset from "./components/Reset";
 class App extends Component {
   state = {
     isSignedIn: false
@@ -30,6 +33,9 @@ class App extends Component {
               render={() => <Profile handleSignIn={this.handleSignIn} />}
             />
             <Route exact path="/otp" component={OtpVerify} />
+            <Route exact path="/forgot" component={Forgot} />
+            <Route exact path="/resetMsg" component={ResetMsg} />
+            <Route exact path="/reset" component={Reset} />}
           </Switch>
         </div>
       </BrowserRouter>
