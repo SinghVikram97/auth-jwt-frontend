@@ -25,16 +25,27 @@ export default class Reset extends Component {
     }
   };
   onKeyUp = () => {
+    let resetButton = document.getElementById("reset");
     if (this.state.password === this.state.passwordConfirm) {
       // Match
       let passwordConfirm = document.getElementById("passwordConfirm");
       passwordConfirm.classList.add("valid");
       passwordConfirm.classList.remove("invalid");
+      resetButton.disabled = false;
     } else {
       // No Match
       let passwordConfirm = document.getElementById("passwordConfirm");
       passwordConfirm.classList.add("invalid");
       passwordConfirm.classList.remove("valid");
+      resetButton.disabled = true;
+    }
+  };
+  handleKeyUp = () => {
+    let resetButton = document.getElementById("reset");
+    if (this.state.password !== this.state.passwordConfirm) {
+      resetButton.disabled = true;
+    } else {
+      resetButton.disabled = false;
     }
   };
   render() {
@@ -56,6 +67,7 @@ export default class Reset extends Component {
                   name="password"
                   onBlur={this.onBlur}
                   onChange={this.onPasswordChange}
+                  onKeyUp={this.handleKeyUp}
                 />
                 <label for="password">Password</label>
               </div>
@@ -82,7 +94,7 @@ export default class Reset extends Component {
             <div className="row" style={{ marginTop: "5%" }}>
               <div className="col s3" />
               <div className="col s6 center-align">
-                <input type="submit" value="Reset" />
+                <input id="reset" type="submit" value="Reset" />
               </div>
             </div>
           </form>
